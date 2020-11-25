@@ -6,7 +6,7 @@ from Contratos.apps.authentication import views
 router = routers.DefaultRouter()
 
 
-router.register(r"useres", views.UserViewSet)
+router.register(r"users", views.UserViewSet)
 
 
 urlpatterns = [path("", include(router.urls))]

@@ -15,7 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.urls.conf import include
+from Contratos.apps.authentication import urls as authUrls
+from Contratos.apps.personas import urls as personasUrls
+from Contratos.apps.contratos import urls as contratosUrls
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("auth/", include(authUrls)),
+    path("personas/", include(personasUrls)),
+    path("contratos/", include(contratosUrls)),
 ]

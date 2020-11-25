@@ -1,4 +1,5 @@
 from django.db import models
+from Contratos.apps.personas.models import Persona
 
 # Create your models here.
 
